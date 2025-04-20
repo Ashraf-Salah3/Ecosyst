@@ -8,6 +8,10 @@ import { logo } from "@/assets";
 const SidebarPage = () => {
   const router = useRouter();
   const pathName = usePathname();
+  const logOutHandler  = ()=>{
+    localStorage.removeItem("authToken")
+    router.replace("/")
+  }
 
   return (
     <header className={styles["header-container"]}>
@@ -63,7 +67,7 @@ const SidebarPage = () => {
             </ul>
           </div>
           <div className={styles.exit}>
-            <button onClick={() => router.replace("/")}>Exit</button>
+            <button onClick={logOutHandler}>Log Out</button>
           </div>
         </nav>
       </div>
