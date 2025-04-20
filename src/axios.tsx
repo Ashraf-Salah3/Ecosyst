@@ -9,9 +9,8 @@ const instance = axios.create({
     "X-device": "web",
     "X-Portal": "patient",
     Accept: "application/json; charset=utf-8",
-    "Accept-Language": localStorage.lang,
+   
     "Content-Type": "application/json; charset=utf-8",
-    ...(localStorage.getItem("medtoken") ? { Authorization: `Bearer ${localStorage.getItem("medtoken")}` } : {}),
   }
 });
 
@@ -22,7 +21,6 @@ export const devInstance = axios.create({
     "X-device": "web",
     "X-Portal": "patient",
     Accept: "application/json; charset=utf-8",
-    "Accept-Language": localStorage.lang,
     "Content-Type": "application/json; charset=utf-8",
   },
 });
