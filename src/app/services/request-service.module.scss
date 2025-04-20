@@ -1,0 +1,66 @@
+.services{
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+
+    form{
+        width: 30%;
+        margin: auto;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: var(--main-shadow);
+        background-color: var( --secondary-background);
+        h2{
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        label{
+            font-size: 15px;
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        input, select, textarea{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        input, select, textarea:focus{
+            outline: none;
+            border: 1px solid var(--main-color);
+        }
+        .btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+         
+            button{
+                background-color: var(--secondary-color);
+                color: black;
+                padding: 10px 4rem;
+                border-radius: 10px;
+            }
+
+        }
+
+    }
+    .error{
+        color: red;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .services{
+        form{
+            width: 100%;
+        }
+    }
+}

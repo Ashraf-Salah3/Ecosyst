@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+:root {
+  --font-family: Arial, sans-serif;
+  --main-color: #fff;
+  --secondary-color: #2effaf;
+  --secondary-background:rgba(30, 72, 59, 0.15);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: var(--font-family);
+  background: #001a10;
+  padding: 0;
+  margin: 0;
+
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input{
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background: transparent;
+  font-family: var(--font-family) !important;
+  font-size: 15px;
+  font-weight: bold;
+}
+.main-header {
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 58px;
+  text-align: center;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin: 1rem 0;
+}
+.main-title h1{
+  font-size: 25px;
+}
+.main-title button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background-color: var(--secondary-color);
+  color: black;
+  padding: .8rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: var(--main-font);
+}
+
+.tableContainer {
+  background-color: transparent !important;
+  border-radius: 10px;
+  border: none;
+  box-shadow:  none !important;
+}
+
+
+tbody{
+  box-shadow: none !important;
+}
+.tableContainer .subhead {
+  background-color: transparent;
+  color:white !important;;
+}
+.tableContainer .subhead tr th {
+  color: var(--secondary-color) !important;
+  border-bottom: none;
+  font-weight: bold;
+  max-width: 100%;
+  font-size: 17px;
+}
+.tableContainer .subhead tr th div{
+  text-align: center;
+  width: 100%;
+
+}
+
+.tableContainer .subContent{
+  color: white;
+  
+}
+.tableContainer .subContent td{
+  color: white;
+  font-weight: bold;
+max-width: 100%;
+  border-bottom: none;
+
+}
+.tableContainer .subContent td p{
+  text-align: center;
+  font-size: 12px;
+  word-wrap: break-word;
+  word-break: break-word;
+  width: 100%;
+  
+}
+.tableContainer .edit{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+
+}
+.tableContainer .edit button{
+  color: var(--secondary-color);
+  background-color: transparent;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--accent);
+  border: 1px solid rgb(219, 219, 219);
+
+}
+.loading{
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+/*small*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/*Medium*/
+@media (min-width: 991px) {
+  .container {
+    width: 950px;
+  }
+}
+
+/*large*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

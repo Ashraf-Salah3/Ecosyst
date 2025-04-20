@@ -1,0 +1,59 @@
+.discover-container {
+  background: url("../../assets/Ecosyst/discoverbackground.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0;
+  margin-top: 4rem;
+
+  .items {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      color: var(--main-color);
+
+      h2 {
+        font-size: 2rem;
+        color: var(--main-color);
+        font-weight: 800;
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: var(--text-color);
+        max-width: 30rem;
+        text-align: center;
+      }
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      a {
+        background-color: var(--secondary-color);
+        padding: 10px 3.5rem;
+        color: black;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .discover-container{
+    .items{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .title {
+        gap: 10px;
+      }
+    }
+  }
+}

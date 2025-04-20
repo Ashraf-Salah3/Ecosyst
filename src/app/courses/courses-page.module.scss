@@ -1,0 +1,89 @@
+.course-container {
+  margin: 2rem 0;
+  .courses-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+
+
+    .course-content {
+      --webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 10%);
+      -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 10%);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 10%);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      background-color: var(--secondary-background);
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 20%);
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: 15rem;
+      }
+
+
+      .text {
+        padding: 20px 20px 0 ;
+        color: white;
+
+        h3{
+          letter-spacing: 1.2;
+        }
+
+        p {
+          margin: 10px 0 0;
+          line-height: 1.5;
+          color: #777;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          line-clamp: 1;
+          -webkit-line-clamp: 1;
+          text-overflow: ellipsis;
+          display: block;
+        }
+      }
+      .info {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          color: var(--secondary-color);
+          font-weight: bold;
+          font-size: 15px;
+        }
+        svg {
+          color: var(--secondary-color);
+        }
+      }
+      &:hover {
+        svg {
+          animation: swing 0.6s linear infinite;
+        }
+      }
+    }
+    @keyframes swing {
+      100% {
+        transform: translatex(10px);
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .courses-items{
+      .course-content {
+      img{
+        width: 100%;
+        height: 15rem;
+      }
+    }}
+  }
+}

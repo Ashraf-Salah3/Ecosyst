@@ -1,0 +1,122 @@
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: rgb(23 42 36);
+  padding: 10px 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .3s;
+  .mobile-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    img {
+      width: 10rem;
+    }
+  }
+  nav {
+    width: 60%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+
+      li {
+        transition: background 0.3s ease;
+    
+        &:hover {
+          border-bottom: 1px solid white;
+        }
+    
+        a {
+          color: #fff;
+          text-decoration: none;
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+    
+        &.activeLink { 
+          border-bottom: 1px solid white;
+        }
+      
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .menu-icon {
+    display: none !important;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s;
+  }
+  .logo-mobile {
+    display: none;
+  }
+}
+
+nav ul li .activeLink {
+  background-color: rgb(26 120 90 / 85%);
+  border-radius: 6px; 
+}
+
+@media screen and (max-width: 800px) {
+  .fixed{
+    padding: 10px 1rem !important;
+  }
+  .header {
+    flex-direction: column;
+    align-items: start;
+    background-color:rgb(15 37 30) ;
+    padding: 1rem !important;
+    transition: all 0.5s;
+    .mobile-menu{
+      width: 100%;
+    }
+
+    nav{
+      padding: 1rem;
+      display : block  !important;
+      width: 100% !important;
+      transition: all .3s;
+
+
+      ul {
+        flex-direction: column;
+        gap: .5rem !important;
+        li{
+          display: block;
+          margin-bottom: 10px;
+          width: 100%;
+
+        
+        }
+      }
+    }
+
+    .hide-nav{
+      display: none !important;
+
+    }
+    .show-nav{
+      display: block !important;
+    }
+
+    .menu-icon {
+      display: flex !important;
+    }
+    .logo-mobile {
+      display: flex;
+      align-items: center;
+    }
+    }
+    }
