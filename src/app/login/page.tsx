@@ -5,9 +5,11 @@ import { toast } from "sonner";
 import styles from "./login.module.scss";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { LoginPageProps } from "@/types/types";
+import { useRouter } from "next/navigation";
 const LoginPage = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter()
 
   const { register, handleSubmit } = useForm<LoginPageProps>();
 
@@ -25,6 +27,8 @@ const LoginPage = () => {
         const token = response.data.token;
 
         localStorage.setItem("authToken", token);
+
+        router.replace("/admin")
       }
     } catch {
       setIsLoading(false);
