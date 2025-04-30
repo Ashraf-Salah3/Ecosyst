@@ -48,11 +48,11 @@ const Header = () => {
               <span>About Us</span>
             </Link>
           </li>
-          <li className={pathName === "/courses"  ? styles.activeLink : ""}>
+          {/* <li className={pathName === "/courses"  ? styles.activeLink : ""}>
             <Link href="/courses">
               <span>Courses</span>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

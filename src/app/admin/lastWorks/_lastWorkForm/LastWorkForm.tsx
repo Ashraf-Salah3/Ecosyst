@@ -1,5 +1,4 @@
 "use client";
-
 import { CategoryPageProps, WorksPageProps } from "@/types/types";
 import React, { useEffect, useState } from "react";
 import styles from "./works.module.scss";
@@ -38,7 +37,7 @@ const LastWorkForm = ({ isEdit, initialData, workId }: LastWorkFormProps) => {
   useEffect(() => {
     if (initialData) {
       reset(initialData);
-      setImage(initialData.attachment);
+      setImage(initialData.attachment?.trim());
     }
   }, [reset, initialData]);
 
